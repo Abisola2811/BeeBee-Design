@@ -1,0 +1,220 @@
+body{
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    /*font: 150px/ 1.5/Arial, Helvetica, sans-serif; font-size, / line-height, / font-family.*/
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* GLOBAL*/
+/*this container takes care of all containers in the website.*/
+.container{
+    width: 80%;
+    margin: auto; /*This moves content to the middle of page because there are equal spaces to both left and rigt sides.*/
+    /*overflow: visible is the default vaulue of the overflow property.*/
+    overflow: hidden;
+
+    /* overflow: hidden does two things, it crops any extending or overflowing child/content out and also expands to contain children in cases of floats by creating a BFC (Block Formatting Context).
+    overflow:hidden puts a box around the element, clips anything outside and makes the parent responsible for any floats*/
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.button_1{
+    height: 35px;
+    background: #e8491d;
+    border: 0;
+    padding: 0 20px 0 20px;/* top - left - bottom - right*/
+    color: #ffffff;
+}
+
+.dark{
+    padding: 15px;
+    background: #35424a;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*global*/
+header{
+    background-color: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px; /*this is the smallest height it can attain, that is it canot be smaller than 70px. it can be longer than 70px though*/
+    border-bottom: #e8491d 3px solid; /* color, weight, style*/
+}
+
+header a{
+    color: #ffffff;
+    text-decoration: none; /*Beause hyperlinks usually have underscore, we set the text decoration to "none" to remove any default decoration.*/
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+
+header li{
+    float: left; /*This makes the individual list items float to the left that is home is by the left of services and services is also on the left of about and about comes last*/
+    display: inline;
+    list-style: none;
+    padding: 0 20px 0 20px; /*top left bottom right*/
+}
+
+header #branding{
+    float: left;
+}
+
+
+header h1{
+    margin: 0;
+    display: inline;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+header .BB, header .current a{
+    color: #e8491d;
+}
+header a:hover{
+    color: #CCCCCC;
+    font-weight: bold;
+}
+
+
+.css{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/*#showcase*/
+#showcase{
+    min-height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/laptopimage2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 80%;/*-300px moves image up while 300px moves image down*/
+    text-align: center;
+    color: #ffffff;
+}
+
+#showcase h1{
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p{
+    font-size: 20px;
+    margin: 0;
+}
+
+#newsletter{
+    padding: 15px;
+    background: #35424a;
+    color: #ffffff;
+}
+
+#newsletter h1{
+    float: left;
+}
+
+#newsletter form{
+    float: right;
+    margin-top: 25px;
+}
+
+#newsletter input[type="email"]{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+/*#boxes*/
+#boxes{
+    margin-top: 20px;
+}
+
+#boxes .box{
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+
+#boxes .box img{
+    width: 100px;
+}
+
+
+/*#main_col*/
+article#main_col{
+    float: left;
+    width: 65%;
+
+}
+
+/*aside*/
+aside#sidebar{/*we don't use space when we're trying to identify the same element.*/
+    float: right;
+    width: 30%;
+    margin-top: 77px;
+}
+
+/*aside services*/
+.quote input, .quote textarea{ /*Here, we joined two combinators with the comma*/
+    width: 100%;
+}
+
+
+
+/*Services*/
+ul#services li{
+    list-style: none;
+    padding: 20px;
+    border: #cccccc solid 1px;
+    margin-bottom: 10px;
+    background-color: #e6e6e6;
+
+}
+
+
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #e84913;
+    color: #ffffff;
+    text-align: center;
+}
+
+/*media queries*/
+@media(max-width:768px){/*any screen size smaller than 768px*/
+header #branding, header nav, header nav li, #newsletter h1, #newsletter form, #boxes .box, article#main_col, aside#sidebar{
+    float: none;
+    text-align: center;
+    width: 100%;
+}
+
+header{
+    padding-bottom: 20px;
+}
+
+#showcase h1{
+    margin-top: 40px;
+}
+#newsletter button, .quote button{
+    display: block;
+    width: 100%;
+}
+
+#newsletter form input[type="email"], .quote input, .quote textarea{
+    width: 100%;
+    margin-bottom: 5px;
+}
+}
